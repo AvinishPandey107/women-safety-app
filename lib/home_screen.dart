@@ -1,7 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:women_safety_app/widgets/custom_appbar.dart';
+import 'package:women_safety_app/widgets/home_widgets/custom_appbar.dart';
+import 'package:women_safety_app/widgets/home_widgets/emergency.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -32,7 +33,29 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
-            children: [CustomAppbar(quoteIndex: qIndex, onTap: getRandomQuote)],
+            children: [
+              CustomAppbar(
+                quoteIndex: qIndex, 
+                onTap: 
+                getRandomQuote
+              ),
+              Expanded(
+                child: ListView(
+                  shrinkWrap: true,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        "Emergency",
+                        style:
+                        TextStyle(fontSize: 35, fontWeight: FontWeight.w100)
+                        ),
+                    ),
+                    Emergency(),
+                  ],
+                )
+                )
+            ],
           ),
         ),
       ),

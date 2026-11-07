@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:women_safety_app/home_screen.dart';
 
 void main() {
@@ -16,6 +17,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        textTheme:
+        ThemeData.light().textTheme.apply(
+          fontFamily:
+          GoogleFonts.alkalami().fontFamily,
+        ), 
       ),
       home: HomeScreen(),
     );
