@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:women_safety_app/widgets/home_widgets/LiveSafe.dart';
 import 'package:women_safety_app/widgets/home_widgets/custom_appbar.dart';
 import 'package:women_safety_app/widgets/home_widgets/emergency.dart';
 
@@ -46,12 +47,21 @@ class _HomeScreenState extends State<HomeScreen> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        "Emergency",
+                        "EMERGENCY",
                         style:
                         TextStyle(fontSize: 35, fontWeight: FontWeight.w100)
                         ),
                     ),
                     Emergency(),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        "Explore LiveSafe",
+                        style:
+                        TextStyle(fontSize: 28, fontWeight: FontWeight.w100)
+                        ),
+                    ),
+                    LiveSafe(),
                   ],
                 )
                 )
